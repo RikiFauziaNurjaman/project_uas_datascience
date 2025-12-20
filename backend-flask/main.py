@@ -49,6 +49,8 @@ def prepare_image(image, target_size):
     image = img_to_array(image)
     
     image = np.expand_dims(image, axis=0)
+
+    image = preprocess_input(image)
     
     return image
 
@@ -59,7 +61,7 @@ def index():
         "status": "aktif",
         "model_loaded": {
             "sampah": model_sampah is not None,
-            "jantung": heart_model is not None
+            "jantung": jantung_model is not None
         }
     })
 
