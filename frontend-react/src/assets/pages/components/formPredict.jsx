@@ -34,4 +34,6 @@ function FormPredict({
         setLoading(true);
         setPredictResult(null);
     }
+
+    
 }
