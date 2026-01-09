@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.mobilenet_v3 import preprocess_input
@@ -10,6 +11,7 @@ import pandas as pd
 import joblib 
 
 app = Flask(__name__)
+CORS(app)
 
 BASE_DIR = os.getcwd()
 MODEL_PATH_SAMPAH = os.path.join(BASE_DIR, 'models', 'model_sampah.keras')

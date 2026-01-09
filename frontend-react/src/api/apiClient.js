@@ -1,9 +1,10 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: "",
+  baseURL: "http://127.0.0.1:5000",
   headers: {
     Accept: "application/json",
+    "Content-Type": "application/json",
   },
 });
 
