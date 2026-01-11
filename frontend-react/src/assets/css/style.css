@@ -1,5 +1,6 @@
-/* Simplified styles (removed Tailwind imports) */
-:root{--bg:#0f172a;--text:#e6eef8}
-*{box-sizing:border-box}
-html,body,#root{height:100%}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg),#071021);color:var(--text)}
+@import "tailwindcss";
+
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  min-height: 100vh;
+}
