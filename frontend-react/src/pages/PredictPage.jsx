@@ -1,9 +1,11 @@
+import React, { useState } from "react";
 import FormPredict from "./components/formPredict.jsx";
-import ResultPredict from "./components/resultPredict.js";
+import ResultPredict from "./components/resultPredict.jsx";
 
 function PredictPage() {
-    const [predictResult,setPredictResult] = require("react").useState(null);
-    const [isLoading,setLoading] = require("react").useState(false);
+    const [predictResult, setPredictResult] = useState(null);
+    const [isLoading, setLoading] = useState(false);
+
     return (
         <div className="predict-page">
             <h1>Prediksi Jantung</h1>
@@ -13,11 +15,10 @@ function PredictPage() {
                 setLoading={setLoading}
                 predictResult={predictResult}
                 setPredictResult={setPredictResult}
-            />  
-            <ResultPredict
-                isLoading={isLoading}
-                predictResult={predictResult}
             />
+            <ResultPredict isLoading={isLoading} predictResult={predictResult} />
         </div>
     );
 }
+
+export default PredictPage;
